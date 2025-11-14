@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AyudaLogica", "AyudaLogica.csproj", "{A6628DD4-A7A1-4A15-869D-8A872F832B28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6628DD4-A7A1-4A15-869D-8A872F832B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6628DD4-A7A1-4A15-869D-8A872F832B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6628DD4-A7A1-4A15-869D-8A872F832B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6628DD4-A7A1-4A15-869D-8A872F832B28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EA2DD79-7685-47DF-BD23-DF70741B3285}
+	EndGlobalSection
+EndGlobal
