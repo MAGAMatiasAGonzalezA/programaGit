@@ -57,9 +57,11 @@ namespace AyudaLogica
             btn_anterior.Enabled = (registroActual > 0);
             btn_siguiente.Enabled = (registroActual < datos.Rows.Count - 1);
 
+            lbl_ingredientes_cant.Visible = true;
             txt_receta_nombre.ReadOnly = true;
             txt_procedimiento.ReadOnly = true;
             txt_porciones.ReadOnly = true;
+            txt_receta_id.ReadOnly = true;
             btn_guardar.Visible = false;
             btn_cancelar.Visible = false;
             btn_modificar.Visible = true;
@@ -137,51 +139,22 @@ namespace AyudaLogica
             txt_receta_nombre.ReadOnly = false;
             txt_procedimiento.ReadOnly = false;
             txt_porciones.ReadOnly = false;
-            //txt_ingrediente_cant.ReadOnly = false;
-            //txt_ingrediente_cant.Visible = true;
             btn_guardar.Visible = true;
             btn_cancelar.Visible = true;
             btn_modificar.Visible = false;
             btn_receta.Visible = false;
-            //btn_agregarIngredientes.Visible = true;
             btn_anterior.Visible = false;
             btn_siguiente.Visible = false;
             lbl_contador.Visible = false;
 
             DataTable ingredientes = conexion.Items();
             comboBox1.Items.Clear();
-
-            //foreach (DataTable row in ingredientes.Rows)
-            //{
-            //    if (row.IsNewRow)
-            //}
-            //{
-            //    if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() == comboBox1.SelectedItem.ToString());
-            //    {
-            //        return; // Ya existe, no lo agregues
-            //    }
-            //}
-
-            //dgw_ingredientes.Rows.Add(comboBox1.SelectedItem);
             foreach (DataRow fila in ingredientes.Rows)
             {
                 comboBox1.Items.Add(fila["Item"].ToString());
             }
-            //comboBox1.DataSource = ingredientes;
-            //comboBox1.DisplayMember = "Item";
-            //comboBox1.ValueMember = "Item";
             comboBox1.Visible = true;
             comboBox1.SelectedIndex = -1;
-
-            //comboBox1.SelectedIndexChanged != -1
-            //if (dgw_ingredientes.Rows[] == IsNewRow)
-            //{
-            //}
-            //if(dgw_ingredientes.Rows.Add(comboBox1.SelectedItem.ToString()) == null)
-            //{
-
-            //}
-            //dgw_ingredientes.Rows.Add(comboBox1.SelectedItem);
 
         }
 
@@ -239,34 +212,62 @@ namespace AyudaLogica
 
                 string consulta = $"UPDATE recetas SET receta_nombre = '{nombreReceta}', ingredientes_cant = '{ingredientesCant}', procedimiento = '{procedimiento}', porciones = '{porciones}' WHERE receta_id = '{id}';";
                 DataTable modificada = conexion.ObtenerDatos(consulta);
-                MessageBox.Show("Modificado XD, sin ingredientes... AUCH");
 
                 // ACA SEGUIR CON LA CONSULTA DE INGREDIENTES 
+
+                string limpiaIngredientes = $"CALL baja_ingredientes('{id}')";
+                DataTable bajaingre = conexion.ObtenerDatos(limpiaIngredientes);
 
                 foreach (DataGridViewRow fila in dgw_ingredientes.Rows)
                 {
                     // evita la fila vacía
                     if (fila.IsNewRow) continue;
+                    try
+                    {
+                        /*
+                         * string item = fila.Cells["Item"]?.Value?.ToString();
+double? cantidad = fila.Cells["Cantidad"]?.Value != null ? Convert.ToDouble(fila.Cells["Cantidad"].Value.ToString()) : (double?)null;
 
-                    string item = fila.Cells["Item"].Value.ToString();
-                    double cantidad = Convert.ToDouble(fila.Cells["Cantidad"].Value.ToString());
+if (!string.IsNullOrEmpty(item) && cantidad.HasValue)
+{
+    string consultaIngredientes = $"INSERT INTO ingredientesreceta (receta_id, item_nombre, cantidad) VALUES ('{id}', '{item}', '{cantidad}')";
 
-                    string consultaIngredientes = $"";
+    DataTable ingrediente = conexion.ObtenerDatos(consultaIngredientes);
+}
+                         
+                         */
 
+
+                        if (fila.Cells["Item"] != null && fila.Cells["Cantidad"].Value != null)
+                        {
+                            string item = fila.Cells["Item"]?.Value?.ToString();
+                            double? cantidad = Convert.ToDouble(fila.Cells["Cantidad"]?.Value.ToString());
+
+                            string consultaIngredientes = $"INSERT INTO ingredientesreceta (receta_id, item_nombre, cantidad) VALUES ('{id}', '{item}', '{cantidad}')";
+                            DataTable ingrediente = conexion.ObtenerDatos(consultaIngredientes);
+                        }
+                        else
+                        {
+                            string item = string.Empty;
+                            continue;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
                 }
+
+                MessageBox.Show("Receta modificado con exito");
+
                 CargarDatos();
                 
-            }
-
-
-               
+            }   
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-            // chequear existencia del ID
-
-
+            //guardo datos de la receta a actualizar
             int id = Convert.ToInt32(txt_receta_id.Text.ToString());
             string nombre = txt_receta_nombre.Text.ToString();
             string procedimiento = txt_procedimiento.Text.ToString();
@@ -274,10 +275,10 @@ namespace AyudaLogica
             int ingredientesCan = Convert.ToInt32(lbl_ingredientes_cant.Text.ToString());
             string usuario = txt_usuario.Text.ToString();
 
+            //modifico la visibilidad del formulario
             txt_receta_nombre.ReadOnly = false;
             txt_procedimiento.ReadOnly = false;
             txt_porciones.ReadOnly = false;
-            //dgw_ingredientes.AllowUserToAddRows = true;
             btn_anterior.Visible = false;
             btn_siguiente.Visible = false;
             lbl_contador.Visible = false;
@@ -288,6 +289,7 @@ namespace AyudaLogica
             btn_cancelar.Visible = true;
             comboBox1.Visible = true;
 
+            //cargo ingredientes del inventario en el combobox
             DataTable ingredientes = conexion.Items();
             comboBox1.Items.Clear();
             foreach (DataRow fila in ingredientes.Rows)
@@ -296,9 +298,10 @@ namespace AyudaLogica
             }
             comboBox1.SelectedIndex = -1;
 
-            //recupero datos del datagrid
+            //creo lista de ingredientes 
             List<Ingredientes> listaIngredientes = new List<Ingredientes>();
 
+            //recupero datos del datagrid y cargo la lista
             foreach (DataGridViewRow fila in dgw_ingredientes.Rows)
             {
                 // evita la fila vacía
@@ -311,6 +314,7 @@ namespace AyudaLogica
                 };
                 listaIngredientes.Add(ingrediente);
             }
+
             //limpio DataGrid y le agrego 2 columnas
             dgw_ingredientes.DataSource = null;
             dgw_ingredientes.Rows.Clear();
@@ -319,6 +323,7 @@ namespace AyudaLogica
             dgw_ingredientes.Columns.Add("Cantidad", "Cantidad");
             dgw_ingredientes.AllowUserToAddRows = false;
 
+            //cargo los nuevos datos al datagridview
             foreach (var ing in listaIngredientes)
             {
                 int nuevaFila = dgw_ingredientes.Rows.Add();

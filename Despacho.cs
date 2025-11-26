@@ -19,6 +19,9 @@ namespace AyudaLogica
             conexion = new ConexionBD();
 
             dgv_despacho.ColumnHeadersDefaultCellStyle.Font = new Font(dgv_despacho.Font, FontStyle.Bold);
+
+            dgv_despacho.CellClick += Dgv_despacho_CellClick;
+
             CargarItems();
         }
 
@@ -28,6 +31,14 @@ namespace AyudaLogica
             string consulta = "SELECT * FROM plaza";
             DataTable datos = conexion.ObtenerDatos(consulta);
             dgv_despacho.DataSource = datos;
+            
+            foreach (DataGridViewColumn column in dgv_despacho.Columns)
+            {
+                if (column.Name == "usuario" || column.Name == "plaza_id")
+                {
+                    column.Visible = false;
+                }
+            }
 
             dgv_despacho.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             AgregarBotonesIndividuales();
@@ -50,30 +61,69 @@ namespace AyudaLogica
                 dgv_despacho.Columns.Add(btn_usar);
             }
             dgv_despacho.AllowUserToAddRows = false;
-            dgv_despacho.CellClick += Dgv_despacho_CellClick;
+            //dgv_despacho.CellClick -= Dgv_despacho_CellClick;
+            //dgv_despacho.CellClick += Dgv_despacho_CellClick;
         }
 
         private void Dgv_despacho_CellClick(object? sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                string plaza_id = dgv_despacho.Rows[e.RowIndex].Cells["plaza_id"].Value.ToString();
-                string porciones = dgv_despacho.Rows[e.RowIndex].Cells["porciones"].Value.ToString();
-                if (e.RowIndex >= 0 && e.ColumnIndex == dgv_despacho.Columns["btn_usar"].Index)
+                if (e.RowIndex < 0 || e.ColumnIndex != dgv_despacho.Columns["btn_usar"].Index) return;
+
+                int plaza_id = Convert.ToInt32(dgv_despacho.Rows[e.RowIndex].Cells["plaza_id"].Value?.ToString() ?? "0");
+                int porciones = Convert.ToInt32(dgv_despacho.Rows[e.RowIndex].Cells["porciones"].Value?.ToString() ?? "0");
+
+                lbl_ver.Text = $"id => {plaza_id}, porciones => {porciones} antes de consulta";
+
+                //string consultaactualizar = $"UPDATE plaza SET porciones = porciones - 1 WHERE plaza_id = {plaza_id}";
+
+                string consultaactualizar = $"CALL baja_plaza({plaza_id})";
+
+                DataTable filasAfectadas = conexion.ObtenerDatos(consultaactualizar);
+                //int filasAfectadas = Convert.ToInt32(conexion.ObtenerDatos(consultaactualizar));
+
+                if (filasAfectadas.Rows.Count > 0)
                 {
-                    lbl_ver.Text = $"id => {plaza_id}, porciones => {porciones}";
-                    string consulta = $"UPDATE plaza SET porciones = porciones - 1 WHERE plaza_id = '{plaza_id}';";
-                    DataTable datos = conexion.ObtenerDatos(consulta);
+                    lbl_ver.Text += "  Actualizado";
+                    // refresca la grilla
+                }
+                else
+                {
+                    lbl_ver.Text += "  No se encontró plaza";
                 }
                 CargarItems();
-                //return;
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                throw new NotImplementedException();
+                lbl_ver.Text = $"ERROR: {ex.Message}";
             }
         }
+
+
+        //private void Dgv_despacho_CellClick(object? sender, DataGridViewCellEventArgs e)
+        //{
+        //    try
+        //    {
+        //        int plaza_id = Convert.ToInt32(dgv_despacho.Rows[e.RowIndex].Cells["plaza_id"].Value.ToString());
+        //        int porciones = Convert.ToInt32(dgv_despacho.Rows[e.RowIndex].Cells["porciones"].Value.ToString());
+        //        if (e.RowIndex >= 0 && e.ColumnIndex == dgv_despacho.Columns["btn_usar"].Index)
+        //        {
+        //            lbl_ver.Text = $"id = {plaza_id}, porciones = {porciones} antes de consulta";
+
+        //            string consulta = $"CALL baja_plaza({plaza_id});";
+
+        //            DataTable datos = conexion.ObtenerDatos(consulta);
+        //        }
+        //        CargarItems();
+        //        //return;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //        throw new NotImplementedException();
+        //    }
+        //}
 
         private void btn_salir_Click(object sender, EventArgs e)
         {

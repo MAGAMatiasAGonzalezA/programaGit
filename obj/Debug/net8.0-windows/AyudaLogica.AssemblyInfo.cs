@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AyudaLogica")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80df9676b49ed6dd5644d439d2666aa206d632ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("AyudaLogica")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AyudaLogica")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

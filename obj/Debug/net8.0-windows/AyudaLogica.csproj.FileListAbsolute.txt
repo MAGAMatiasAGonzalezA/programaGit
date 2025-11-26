@@ -37,3 +37,4 @@ D:\Programar\proyectoProgramar\C#\AyudaLogica\obj\Debug\net8.0-windows\AyudaLogi
 D:\Programar\proyectoProgramar\C#\AyudaLogica\obj\Debug\net8.0-windows\AyudaLogica.Recetario.resources
 D:\Programar\proyectoProgramar\C#\AyudaLogica\obj\Debug\net8.0-windows\AyudaLogica.Plaza.resources
 D:\Programar\proyectoProgramar\C#\AyudaLogica\obj\Debug\net8.0-windows\AyudaLogica.Despacho.resources
+D:\Programar\proyectoProgramar\C#\AyudaLogica\obj\Debug\net8.0-windows\AyudaLogica.sourcelink.json

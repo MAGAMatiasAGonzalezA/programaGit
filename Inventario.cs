@@ -125,49 +125,6 @@ namespace AyudaLogica
                 //MessageBox.Show("Error: " + ex.Message);
             }
         }
-
-        //private void Dgw_inventario_CellClick(object? sender, DataGridViewCellEventArgs e)
-        //{
-        //    try
-        //    {
-        //        // Verifico que no sea click en el header y que sea una fila válida
-        //        if (e.RowIndex <= 0 || e.ColumnIndex <= 0) return;
-        //        // obtengo los datos de la fila seleccionada
-        //        int registroId = Convert.ToInt32(dgw_inventario.Rows[e.RowIndex].Cells["Registro"].Value);
-        //        string item = dgw_inventario.Rows[e.RowIndex].Cells["Item"].Value.ToString();
-        //        double cantidad = Convert.ToDouble(dgw_inventario.Rows[e.RowIndex].Cells["Cantidad"].Value);
-        //        string usuario = dgw_inventario.Rows[e.RowIndex].Cells["Usuario"].Value.ToString();
-        //        string fecha = dgw_inventario.Rows[e.RowIndex].Cells["Fecha"].Value.ToString();
-
-        //        if (e.RowIndex >= 0 && e.ColumnIndex == dgw_inventario.Columns["btn_Eliminar"].Index)
-        //        {
-        //            EliminarRegistro(registroId);
-        //            CargarItems();
-        //            return;
-
-        //        }
-        //        else if (e.RowIndex >= 0 && e.ColumnIndex == dgw_inventario.Columns["btn_Ingreso"].Index)
-        //        {
-        //            EditaInventario EditaForm = new EditaInventario(registroId, usuario, item, cantidad, fecha, "ingreso");
-        //            EditaForm.ShowDialog();
-        //            CargarItems();
-        //            return;
-        //        }
-        //        else if (e.RowIndex >= 0 && e.ColumnIndex == dgw_inventario.Columns["btn_egreso"].Index)
-        //        {
-        //            EditaInventario EditaForm = new EditaInventario(registroId, usuario, item, cantidad, fecha, "egreso");
-        //            EditaForm.ShowDialog();
-        //            CargarItems();
-        //            return;
-        //        }
-
-        //    }
-        //    catch (NotImplementedException ex)
-        //    {
-        //        //throw new NotImplementedException();
-        //        MessageBox.Show("Algo Malir Sal" + ex.Message);
-        //    }
-        //}
         private void btn_salir_Click(object sender, EventArgs e)
         {
             this.Close();

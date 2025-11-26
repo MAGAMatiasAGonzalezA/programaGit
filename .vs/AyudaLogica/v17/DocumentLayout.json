@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|d:\\programar\\proyectoprogramar\\c#\\ayudalogica\\recetario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|solutionrelative:recetario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\recetario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|solutionrelative:recetario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|d:\\programar\\proyectoprogramar\\c#\\ayudalogica\\despacho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|solutionrelative:despacho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|d:\\programar\\proyectoprogramar\\c#\\ayudalogica\\recetario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|solutionrelative:recetario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\despacho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|solutionrelative:despacho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\recetario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|solutionrelative:recetario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|d:\\programar\\proyectoprogramar\\c#\\ayudalogica\\plaza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|solutionrelative:plaza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\plaza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|solutionrelative:plaza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A6628DD4-A7A1-4A15-869D-8A872F832B28}|AyudaLogica.csproj|d:\\programar\\proyectoprogramar\\c#\\ayudalogica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,55 +54,69 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Recetario.cs",
               "DocumentMoniker": "D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\Recetario.cs",
               "RelativeDocumentMoniker": "Recetario.cs",
               "ToolTip": "D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\Recetario.cs",
               "RelativeToolTip": "Recetario.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAwCoBAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAOYAAAAAAAAAAAAmwO8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-20T23:40:00.441Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Recetario.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\Recetario.cs",
               "RelativeDocumentMoniker": "Recetario.cs",
               "ToolTip": "D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\Recetario.cs [Dise\u00F1o]",
               "RelativeToolTip": "Recetario.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T23:39:50.529Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Despacho.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\Despacho.cs",
-              "RelativeDocumentMoniker": "Despacho.cs",
-              "ToolTip": "D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\Despacho.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Despacho.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T15:52:48.511Z"
+              "WhenOpened": "2025-10-20T23:39:50.529Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Despacho.cs [Design]",
+              "DocumentMoniker": "D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\Despacho.cs",
+              "RelativeDocumentMoniker": "Despacho.cs",
+              "ToolTip": "D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\Despacho.cs [Design]",
+              "RelativeToolTip": "Despacho.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T15:52:48.511Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Despacho.cs",
               "DocumentMoniker": "D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\Despacho.cs",
               "RelativeDocumentMoniker": "Despacho.cs",
               "ToolTip": "D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\Despacho.cs",
               "RelativeToolTip": "Despacho.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwA8AAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAwwDoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T15:57:29.617Z"
+              "WhenOpened": "2025-10-24T15:57:29.617Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Plaza.cs",
+              "DocumentMoniker": "D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\Plaza.cs",
+              "RelativeDocumentMoniker": "Plaza.cs",
+              "ToolTip": "D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\Plaza.cs",
+              "RelativeToolTip": "Plaza.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T13:56:03.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -120,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Programar\\proyectoProgramar\\C#\\AyudaLogica\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
